@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1031034948373",
+    "project_id": "pmdm-agarimo",
+    "storage_bucket": "pmdm-agarimo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1031034948373:android:6b4124bdfaf0097a67771c",
+        "android_client_info": {
+          "package_name": "com.dam2.pmdm_agarimo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1031034948373-dbagb1fqf46kc933gc2emd9tgesbma24.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dam2.pmdm_agarimo",
+            "certificate_hash": "25b777740feb0d4a1d739d4c78506484d9b6adcf"
+          }
+        },
+        {
+          "client_id": "1031034948373-bc6m1llu7hcmt8ivl1n0p79anhr384vc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6LQdFfILshZQCVo0D6zBYvCBTrfckKgk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1031034948373-bc6m1llu7hcmt8ivl1n0p79anhr384vc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
