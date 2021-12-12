@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PMDMAgarimo">
         <activity
+            android:name=".RegActivity"
+            android:exported="true" />
+        <activity
             android:name=".LogActivity2"
             android:exported="true" />
         <activity
