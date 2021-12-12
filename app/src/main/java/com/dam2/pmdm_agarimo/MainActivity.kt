@@ -3,7 +3,6 @@ package com.dam2.pmdm_agarimo
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
@@ -30,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
     private fun Loguearse() {
-        val intent = Intent(this, LogActivity2::class.java)
-        startActivity(intent)
+        val intent2 = Intent(this, LogActivity2::class.java)
+        startActivity(intent2)
     }
 }
