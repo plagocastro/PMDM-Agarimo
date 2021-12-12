@@ -14,7 +14,7 @@ class LogActivity2 : AppCompatActivity() {
         setContentView(R.layout.activity_log2)
 
         val mLogin: Button = findViewById(R.id.bLogin)
-        val mRegister: Button = findViewById(R.id.bRegister)
+
 
         mLogin.setOnClickListener() {
             login()
@@ -27,7 +27,6 @@ class LogActivity2 : AppCompatActivity() {
         var password: String = mPassword.getText().toString()
 
         if (!email.isEmpty() && !password.isEmpty()) {
-            // Validación para ver si la contraseña en mayor o igual a 6
             if (password.length >= 6) {
 
             }
