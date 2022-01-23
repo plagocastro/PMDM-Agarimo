@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
     private fun Registrarse() {
         val intent = Intent(this, RegActivity::class.java)
         startActivity(intent)

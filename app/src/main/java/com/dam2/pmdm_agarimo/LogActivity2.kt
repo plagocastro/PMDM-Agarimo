@@ -9,10 +9,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.ValueEventListener
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.*
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
@@ -25,6 +23,9 @@ class LogActivity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_log2)
         database = Firebase.database.getReference("user")
+
+        val mAuth: FirebaseAuth = FirebaseAuth.getInstance()
+        val mDatabase: DatabaseReference = FirebaseDatabase.getInstance().getReference()
 
         val mEmail: EditText = findViewById(R.id.emailAccess)
         val mPassword: EditText = findViewById(R.id.passwordAccess)
@@ -67,16 +68,20 @@ class LogActivity2 : AppCompatActivity() {
 
             if (!email.isEmpty() && !password.isEmpty()) {
                 if (password.length >= 6) {
-
-                } else {
-                    Toast.makeText(this, "Email o Contraseña incorrectos", Toast.LENGTH_SHORT)
+                    mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener { task ->
+                        if (task.isSuccessful()) {
+                            val intent = Intent(this, MapsActivity::class.java)
+                            startActivity(intent)
+                        }
+                    }
+                }else {
+                    Toast.makeText(this, "Algo esta incorrecto, revisalo", Toast.LENGTH_SHORT)
                         .show()
                 }
             }
         }
         rLogin.setOnClickListener() {
             login()
-            mapaIr()
         }
     }
 }

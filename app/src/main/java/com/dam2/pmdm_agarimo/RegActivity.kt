@@ -1,6 +1,7 @@
 package com.dam2.pmdm_agarimo
 
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -21,6 +22,11 @@ class RegActivity : AppCompatActivity() {
 
         val autentificacion: FirebaseAuth = FirebaseAuth.getInstance()
 
+        fun mapaIr() {
+            val intent = Intent(this, MapsActivity::class.java)
+            startActivity(intent)
+        }
+
         fun registrarUsuario() {
             var name: String = brNombre.getText().toString()
             var email: String = brEmail.getText().toString()
@@ -32,6 +38,7 @@ class RegActivity : AppCompatActivity() {
                         .addOnCompleteListener { task ->
                             if (task.isSuccessful()) {
                                 Toast.makeText(this,"Registro completado correctamente",Toast.LENGTH_SHORT).show()
+                                mapaIr()
                             } else {
                                 Toast.makeText(this,"No se pudo registrar el usuario",Toast.LENGTH_SHORT).show()
                             }
@@ -43,6 +50,7 @@ class RegActivity : AppCompatActivity() {
                 Toast.makeText(this,"Te faltan datos, completalos",Toast.LENGTH_SHORT).show()
             }
         }
+
         brRegistrar.setOnClickListener() {
             registrarUsuario()
         }

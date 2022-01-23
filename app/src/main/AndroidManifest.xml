@@ -40,12 +40,6 @@
             android:name=".LogActivity2"
             android:exported="true" />
         <activity
-            android:name=".LogActivity"
-            android:exported="true" />
-        <activity
-            android:name=".HomeActivity"
-            android:exported="true" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
