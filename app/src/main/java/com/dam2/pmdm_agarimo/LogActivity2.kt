@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.google.android.gms.maps.GoogleMap
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import com.google.firebase.database.ktx.database
@@ -18,6 +19,7 @@ class LogActivity2 : AppCompatActivity() {
 
     private val TAG = "RealTime"
     private lateinit var database:DatabaseReference
+    private lateinit var mMap: GoogleMap
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +37,8 @@ class LogActivity2 : AppCompatActivity() {
         fun writeNewData(nombre: String, lt: Double, lg: Double){
             Log.d(TAG, "Escribiendo datos")
             val user= Profesionales(nombre, lt, lg)
-            database.child("AA01").setValue(user)
+            database.push().setValue(user)
+
         }
 
         bRealtime.setOnClickListener(object: View.OnClickListener{
