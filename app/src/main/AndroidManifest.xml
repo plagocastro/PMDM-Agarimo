@@ -16,6 +16,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PMDMAgarimo">
         <activity
+            android:name=".SeleccionMenu"
+            android:exported="true"
+            android:label="@string/title_activity_seleccion_menu"
+            android:theme="@style/Theme.PMDMAgarimo.NoActionBar" />
+        <activity
             android:name=".MenuEleccion"
             android:exported="true" />
         <!--
